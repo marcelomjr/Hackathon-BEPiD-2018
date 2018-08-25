@@ -23,10 +23,26 @@ class FormViewController: UIViewController, UITextViewDelegate {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
+        self.setTextViewLayout()
+        self.setNavBarLayout()
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
+    }
+    
+    func setNavBarLayout() {
+        navigationController?.navigationBar.barTintColor = UIColor(hexString: "#4E89AD")
+        navigationController?.navigationBar.topItem?.title = "Questionário"
+        let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
+    }
+    
+    func setTextViewLayout() {
+        self.newQuestionTextView.layer.borderColor = UIColor(hexString: "CCCCCC").cgColor
+        self.newQuestionTextView.layer.borderWidth = 1
+        self.newQuestionTextView.layer.cornerRadius = 15
     }
     
     // adds new question to the tableview
@@ -37,6 +53,7 @@ class FormViewController: UIViewController, UITextViewDelegate {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
+            self.newQuestionTextView.text = ""
             self.newQuestionTextView.resignFirstResponder()
         }
     }
