@@ -14,7 +14,7 @@
         <!--Questionário-->
         <scene sceneID="ywX-qo-16V">
             <objects>
-                <viewController id="cbN-us-G2S" customClass="FormViewController" customModule="Doutor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FormViewController" id="cbN-us-G2S" customClass="FormViewController" customModule="Doutor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BXQ-dE-e3W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,6 +144,7 @@
                     <connections>
                         <segue destination="cbN-us-G2S" kind="relationship" relationship="viewControllers" id="BSZ-Ua-ajr"/>
                         <segue destination="Lco-Ej-t1I" kind="relationship" relationship="viewControllers" id="1cd-sY-s7d"/>
+                        <segue destination="DtF-uL-Yu1" kind="relationship" relationship="viewControllers" id="rWP-6T-GOH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tml-v8-o0N" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -159,6 +160,16 @@
                 </viewControllerPlaceholder>
             </objects>
             <point key="canvasLocation" x="1727" y="596"/>
+        </scene>
+        <!--DoctorProfile-->
+        <scene sceneID="nUH-VX-Zjs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DoctorProfile" id="DtF-uL-Yu1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="zAO-Jx-kXf"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z1W-eN-Kbv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="982" y="626"/>
         </scene>
     </scenes>
 </document>

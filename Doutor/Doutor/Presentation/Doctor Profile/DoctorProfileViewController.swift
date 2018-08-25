@@ -29,6 +29,9 @@ class DoctorProfileViewController: UIViewController {
         self.tableView.dataSource = self
 
         // Do any additional setup after loading the view.
+        
+        // change title
+        navigationController?.navigationBar.topItem?.title = "Perfil"
     }
 
     func setDoctorLayout() {
@@ -40,15 +43,15 @@ extension DoctorProfileViewController: DoctorProfileDelegate {
     func presentNewQuestionaireAlert() {
         let alertMessage = UIAlertController(title: "Novo questionário", message: "Digite um nome para este questionário", preferredStyle: .alert)
         alertMessage.addAction(UIAlertAction(title: "Continuar", style: .default, handler: { _ in
-            self.newQuestionaire(withName: alertMessage.textFields![0].text)
+            self.accessQuestionaire(withName: alertMessage.textFields![0].text, isNew: true)
         }))
         alertMessage.addTextField(configurationHandler: nil)
         self.present(alertMessage, animated: true, completion: nil)
     }
     
-    func newQuestionaire(withName name: String?) {
-        //let questionaireController =
-        //self.performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
+    func accessQuestionaire(withName name: String?, isNew: Bool) {
+        let questionaireController =
+        self.performSegue(withIdentifier: "QuestionaireSegue", sender: nil)
     }
 }
 
@@ -79,5 +82,9 @@ extension DoctorProfileViewController: UITableViewDelegate, UITableViewDataSourc
             headerCell.controllerDelegate = self
         }
         return headerCell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
     }
 }
