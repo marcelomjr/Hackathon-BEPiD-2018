@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		12E421DC2130F18C00B0DE03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E421DB2130F18C00B0DE03 /* AppDelegate.swift */; };
-		12E421DE2130F18C00B0DE03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E421DD2130F18C00B0DE03 /* ViewController.swift */; };
+		12E421DE2130F18C00B0DE03 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E421DD2130F18C00B0DE03 /* FormViewController.swift */; };
 		12E421E12130F18C00B0DE03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12E421DF2130F18C00B0DE03 /* Main.storyboard */; };
 		12E421E42130F18C00B0DE03 /* Doutor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12E421E22130F18C00B0DE03 /* Doutor.xcdatamodeld */; };
 		12E421E62130F18D00B0DE03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12E421E52130F18D00B0DE03 /* Assets.xcassets */; };
 		12E421E92130F18D00B0DE03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12E421E72130F18D00B0DE03 /* LaunchScreen.storyboard */; };
+		12E421F12130F2FD00B0DE03 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E421F02130F2FD00B0DE03 /* QuestionTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		12E421D82130F18C00B0DE03 /* Doutor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Doutor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12E421DB2130F18C00B0DE03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		12E421DD2130F18C00B0DE03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		12E421DD2130F18C00B0DE03 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		12E421E02130F18C00B0DE03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		12E421E32130F18C00B0DE03 /* Doutor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Doutor.xcdatamodel; sourceTree = "<group>"; };
 		12E421E52130F18D00B0DE03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12E421E82130F18D00B0DE03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12E421EA2130F18D00B0DE03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12E421F02130F2FD00B0DE03 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				12E421DB2130F18C00B0DE03 /* AppDelegate.swift */,
-				12E421DD2130F18C00B0DE03 /* ViewController.swift */,
+				12E421DD2130F18C00B0DE03 /* FormViewController.swift */,
 				12E421DF2130F18C00B0DE03 /* Main.storyboard */,
 				12E421E52130F18D00B0DE03 /* Assets.xcassets */,
 				12E421E72130F18D00B0DE03 /* LaunchScreen.storyboard */,
 				12E421EA2130F18D00B0DE03 /* Info.plist */,
 				12E421E22130F18C00B0DE03 /* Doutor.xcdatamodeld */,
+				12E421F02130F2FD00B0DE03 /* QuestionTableViewCell.swift */,
 			);
 			path = Doutor;
 			sourceTree = "<group>";
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12E421DE2130F18C00B0DE03 /* ViewController.swift in Sources */,
+				12E421DE2130F18C00B0DE03 /* FormViewController.swift in Sources */,
+				12E421F12130F2FD00B0DE03 /* QuestionTableViewCell.swift in Sources */,
 				12E421E42130F18C00B0DE03 /* Doutor.xcdatamodeld in Sources */,
 				12E421DC2130F18C00B0DE03 /* AppDelegate.swift in Sources */,
 			);
