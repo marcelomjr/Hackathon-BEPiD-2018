@@ -12,6 +12,11 @@ protocol DoctorProfileDelegate: class {
     func presentNewQuestionaireAlert()
 }
 
+struct Form {
+    var formID: String
+    var formName: String
+}
+
 class DoctorProfileViewController: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
@@ -21,6 +26,8 @@ class DoctorProfileViewController: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     
     @IBOutlet weak var tableView: UITableView!
+    
+    var forms = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +45,18 @@ class DoctorProfileViewController: UIViewController {
     @IBAction func unwindToVC1(segue:UIStoryboardSegue) { }
 
     func setDoctorLayout() {
-        
+        DoctorService.getDoctor(doctorCRM: "007", completion: {
+            doctor in
+            DispatchQueue.main.async {
+                self.nameLabel.text = doctor.name
+                self.areaLabel.text = doctor.area
+                self.crmLabel.text = doctor.crm
+                self.forms = doctor.forms
+                self.profileImage.load(url: doctor.imageURL)
+                
+                self.tableView.reloadData()
+            }
+        })
     }
 }
 
@@ -61,7 +79,7 @@ extension DoctorProfileViewController: DoctorProfileDelegate {
 extension DoctorProfileViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return forms.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -70,7 +88,7 @@ extension DoctorProfileViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionaireCell", for: indexPath) as! QuestionaireCell
-        cell.questionaireLabel.text = "something"
+        cell.questionaireLabel.text = forms[indexPath.row]
         return cell
     }
     
@@ -88,6 +106,6 @@ extension DoctorProfileViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        print(forms[indexPath.row])
     }
 }

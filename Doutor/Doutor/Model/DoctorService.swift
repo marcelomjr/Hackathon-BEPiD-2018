@@ -15,6 +15,14 @@ public struct Treatment {
     var userID: String
 }
 
+public struct Doctor {
+    var crm: String
+    var name: String
+    var area: String
+    var forms: [String]
+    var imageURL: String
+}
+
 class DoctorService {
     static var ref: DatabaseReference!
     
@@ -22,9 +30,33 @@ class DoctorService {
         self.ref = Database.database().reference()
     }
   
-    static func getDaySchedule(doctorCRM: String, day: String, completion: @escaping ([Treatment]) -> Void) {
+    static func getDoctor(doctorCRM:String, completion: @escaping (Doctor) -> Void) {
         self.initFirebaseRef()
         
+        self.ref.child("doctors/\(doctorCRM)").observeSingleEvent(of: .value, with: { (snapshot) in
+                let value = snapshot.value as! NSDictionary
+            
+                var formNames = [String]()
+                let formDictionary = value.value(forKeyPath: "forms") as! NSArray
+            
+                for entry in formDictionary {
+                    let entry = entry as! NSDictionary
+                    for (key,_) in entry {
+                        formNames.append(key as! String)
+                    }
+                }
+            
+                let doctor = Doctor(crm: doctorCRM,
+                                    name: value.value(forKey: "nome") as! String,
+                                    area: value.value(forKey: "area") as! String,
+                                    forms: formNames,
+                                    imageURL: value.value(forKey: "imageURL") as! String)
+                completion(doctor)
+            })
+    }
+    
+    static func getDaySchedule(doctorCRM: String, day: String, completion: @escaping ([Treatment]) -> Void) {
+        self.initFirebaseRef()
         
         self.ref.child("doctors/\(doctorCRM)/schedule/\(day)").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary

@@ -14,13 +14,15 @@
         <!--Questionário-->
         <scene sceneID="ywX-qo-16V">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7js-Yt-Kkc" sceneMemberID="firstResponder"/>
+                <exit id="9T6-vh-y0c" userLabel="Exit" sceneMemberID="exit"/>
                 <viewController storyboardIdentifier="FormViewController" id="cbN-us-G2S" customClass="FormViewController" customModule="Doutor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BXQ-dE-e3W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wb7-tu-Qie">
-                                <rect key="frame" x="0.0" y="232" width="375" height="386"/>
+                                <rect key="frame" x="0.0" y="188" width="375" height="479"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionTableViewCell" rowHeight="92" id="eMU-Pa-yp3" customClass="QuestionTableViewCell" customModule="Doutor" customModuleProvider="target">
@@ -51,7 +53,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UVL-Do-ZiP">
-                                <rect key="frame" x="0.0" y="64" width="375" height="160"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="160"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="l4J-Fc-rby">
                                         <rect key="frame" x="16" y="16" width="343" height="98"/>
@@ -107,8 +109,6 @@
                         <segue destination="9T6-vh-y0c" kind="unwind" identifier="unwind" unwindAction="unwindToVC1WithSegue:" id="Ddh-MP-t8g"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7js-Yt-Kkc" sceneMemberID="firstResponder"/>
-                <exit id="9T6-vh-y0c" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2015.2" y="133.5832083958021"/>
         </scene>
@@ -150,7 +150,6 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="cbN-us-G2S" kind="relationship" relationship="viewControllers" id="BSZ-Ua-ajr"/>
                         <segue destination="Lco-Ej-t1I" kind="relationship" relationship="viewControllers" id="1cd-sY-s7d"/>
                         <segue destination="DtF-uL-Yu1" kind="relationship" relationship="viewControllers" id="rWP-6T-GOH"/>
                     </connections>
@@ -163,7 +162,7 @@
         <scene sceneID="cLT-eS-0Bo">
             <objects>
                 <viewControllerPlaceholder storyboardName="Appointment" id="Lco-Ej-t1I" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="eHr-9S-MvI"/>
+                    <tabBarItem key="tabBarItem" title="Consultas" id="eHr-9S-MvI" userLabel="Consultas"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1id-bV-enb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -173,7 +172,7 @@
         <scene sceneID="nUH-VX-Zjs">
             <objects>
                 <viewControllerPlaceholder storyboardName="DoctorProfile" id="DtF-uL-Yu1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="zAO-Jx-kXf"/>
+                    <tabBarItem key="tabBarItem" title="Perfil" id="zAO-Jx-kXf" userLabel="Perfil"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z1W-eN-Kbv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
