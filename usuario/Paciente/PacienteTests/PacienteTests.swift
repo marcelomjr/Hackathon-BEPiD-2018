@@ -1,15 +1,15 @@
 //
-//  MedicoTests.swift
-//  MedicoTests
+//  PacienteTests.swift
+//  PacienteTests
 //
 //  Created by Marcelo Martimiano Junior on 24/08/2018.
 //  Copyright © 2018 Marcelo Martimiano Junior. All rights reserved.
 //
 
 import XCTest
-@testable import Medico
+@testable import Paciente
 
-class MedicoTests: XCTestCase {
+class PacienteTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
