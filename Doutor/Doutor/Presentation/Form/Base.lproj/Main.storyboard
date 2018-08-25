@@ -93,7 +93,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="E7v-7J-UyS"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="SG9-S9-NoM"/>
+                    <tabBarItem key="tabBarItem" title="Forms" id="SG9-S9-NoM"/>
                     <navigationItem key="navigationItem" title="Questionário" id="Rd1-Hs-W6N"/>
                     <connections>
                         <outlet property="newQuestionTextView" destination="l4J-Fc-rby" id="Vr8-fK-mnp"/>
@@ -159,7 +159,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="eHr-9S-MvI"/>
                 </viewControllerPlaceholder>
             </objects>
-            <point key="canvasLocation" x="1727" y="596"/>
+            <point key="canvasLocation" x="1076" y="615"/>
         </scene>
         <!--DoctorProfile-->
         <scene sceneID="nUH-VX-Zjs">

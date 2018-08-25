@@ -25,6 +25,7 @@ class AppointmentInfoViewController: UIViewController {
         
         self.setPatientLayout()
 
+
         // Do any additional setup after loading the view.
     }
     
