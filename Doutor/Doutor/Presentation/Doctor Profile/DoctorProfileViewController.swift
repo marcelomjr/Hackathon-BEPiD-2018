@@ -28,11 +28,14 @@ class DoctorProfileViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
 
-        // Do any additional setup after loading the view.
+        self.setDoctorLayout()
         
         // change title
         navigationController?.navigationBar.topItem?.title = "Perfil"
     }
+    
+    // unwind to parent view controller
+    @IBAction func unwindToVC1(segue:UIStoryboardSegue) { }
 
     func setDoctorLayout() {
         

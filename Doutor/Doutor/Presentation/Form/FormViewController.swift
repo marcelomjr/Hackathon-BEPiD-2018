@@ -53,6 +53,16 @@ class FormViewController: UIViewController, UITextViewDelegate {
         self.newQuestionTextView.layer.cornerRadius = 15
     }
     
+    @IBAction func salvarButtonPressed(_ sender: Any) {
+        unwind(for: UIStoryboardSegue(identifier: "unwindSegue", source: self, destination: self.parent!), towardsViewController: self.parent!)
+    }
+    
+    @IBAction func goBackToOneButtonTapped(_ sender: Any) {
+        
+        performSegue(withIdentifier: "unwind", sender: self)
+        
+    }
+    
     // adds new question to the tableview
     @IBAction func okButtonPressed(_ sender: Any) {
         if self.newQuestionTextView.text != nil {

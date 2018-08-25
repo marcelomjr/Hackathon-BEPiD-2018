@@ -18,13 +18,17 @@
 		12E421FA2131086C00B0DE03 /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E421F92131086C00B0DE03 /* AppointmentViewController.swift */; };
 		12E421FE2131090500B0DE03 /* Appointment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12E421FD2131090500B0DE03 /* Appointment.storyboard */; };
 		12E4220021310CBF00B0DE03 /* AppointmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E421FF21310CBF00B0DE03 /* AppointmentCollectionViewCell.swift */; };
-		12E422032131178C00B0DE03 /* AppointmentInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12E422022131178C00B0DE03 /* AppointmentInfo.storyboard */; };
-		12E42205213166DD00B0DE03 /* AppointmentInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E42204213166DD00B0DE03 /* AppointmentInfoViewController.swift */; };
-		12E422072131678600B0DE03 /* PositiveQuestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E422062131678600B0DE03 /* PositiveQuestionsTableViewCell.swift */; };
 		12E4220B213177DF00B0DE03 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12E4220A213177DF00B0DE03 /* GoogleService-Info.plist */; };
-		12E4220D2131863F00B0DE03 /* AppointmentInfoHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E4220C2131863F00B0DE03 /* AppointmentInfoHeaderTableViewCell.swift */; };
 		12E4220F21318ACD00B0DE03 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E4220E21318ACD00B0DE03 /* UIImageView.swift */; };
 		12E4221221318BE100B0DE03 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E4221121318BE100B0DE03 /* Errors.swift */; };
+		12E422222131CF4D00B0DE03 /* QuestionaireInfoHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E4221E2131CF4C00B0DE03 /* QuestionaireInfoHeaderTableViewCell.swift */; };
+		12E422232131CF4D00B0DE03 /* QuestionaireCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E4221F2131CF4C00B0DE03 /* QuestionaireCell.swift */; };
+		12E422242131CF4D00B0DE03 /* DoctorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E422202131CF4D00B0DE03 /* DoctorProfileViewController.swift */; };
+		12E422252131CF4D00B0DE03 /* DoctorProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12E422212131CF4D00B0DE03 /* DoctorProfile.storyboard */; };
+		12E4222A2131CF7000B0DE03 /* AppointmentInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E422262131CF6F00B0DE03 /* AppointmentInfoViewController.swift */; };
+		12E4222B2131CF7000B0DE03 /* AppointmentInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12E422272131CF7000B0DE03 /* AppointmentInfo.storyboard */; };
+		12E4222C2131CF7000B0DE03 /* AppointmentInfoHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E422282131CF7000B0DE03 /* AppointmentInfoHeaderTableViewCell.swift */; };
+		12E4222D2131CF7000B0DE03 /* PositiveQuestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E422292131CF7000B0DE03 /* PositiveQuestionsTableViewCell.swift */; };
 		2318AA730767A324A367FC78 /* Pods_Doutor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B11F1BF59E1A9232F12A3E3 /* Pods_Doutor.framework */; };
 		9C9C66AD21319AF300A8CF37 /* DoctorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9C66AC21319AF300A8CF37 /* DoctorService.swift */; };
 		9C9C66AF21319CA900A8CF37 /* DoctorTreatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9C66AE21319CA900A8CF37 /* DoctorTreatment.swift */; };
@@ -44,13 +48,17 @@
 		12E421F92131086C00B0DE03 /* AppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
 		12E421FD2131090500B0DE03 /* Appointment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Appointment.storyboard; sourceTree = "<group>"; };
 		12E421FF21310CBF00B0DE03 /* AppointmentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentCollectionViewCell.swift; sourceTree = "<group>"; };
-		12E422022131178C00B0DE03 /* AppointmentInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AppointmentInfo.storyboard; sourceTree = "<group>"; };
-		12E42204213166DD00B0DE03 /* AppointmentInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentInfoViewController.swift; sourceTree = "<group>"; };
-		12E422062131678600B0DE03 /* PositiveQuestionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositiveQuestionsTableViewCell.swift; sourceTree = "<group>"; };
 		12E4220A213177DF00B0DE03 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		12E4220C2131863F00B0DE03 /* AppointmentInfoHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentInfoHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		12E4220E21318ACD00B0DE03 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		12E4221121318BE100B0DE03 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		12E4221E2131CF4C00B0DE03 /* QuestionaireInfoHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionaireInfoHeaderTableViewCell.swift; path = "Doutor/Presentation/Doctor Profile/QuestionaireInfoHeaderTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		12E4221F2131CF4C00B0DE03 /* QuestionaireCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionaireCell.swift; path = "Doutor/Presentation/Doctor Profile/QuestionaireCell.swift"; sourceTree = SOURCE_ROOT; };
+		12E422202131CF4D00B0DE03 /* DoctorProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DoctorProfileViewController.swift; path = "Doutor/Presentation/Doctor Profile/DoctorProfileViewController.swift"; sourceTree = SOURCE_ROOT; };
+		12E422212131CF4D00B0DE03 /* DoctorProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = DoctorProfile.storyboard; path = "Doutor/Presentation/Doctor Profile/DoctorProfile.storyboard"; sourceTree = SOURCE_ROOT; };
+		12E422262131CF6F00B0DE03 /* AppointmentInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppointmentInfoViewController.swift; path = "Doutor/Presentation/Appointment Info/AppointmentInfoViewController.swift"; sourceTree = SOURCE_ROOT; };
+		12E422272131CF7000B0DE03 /* AppointmentInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AppointmentInfo.storyboard; path = "Doutor/Presentation/Appointment Info/AppointmentInfo.storyboard"; sourceTree = SOURCE_ROOT; };
+		12E422282131CF7000B0DE03 /* AppointmentInfoHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppointmentInfoHeaderTableViewCell.swift; path = "Doutor/Presentation/Appointment Info/AppointmentInfoHeaderTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		12E422292131CF7000B0DE03 /* PositiveQuestionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PositiveQuestionsTableViewCell.swift; path = "Doutor/Presentation/Appointment Info/PositiveQuestionsTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		61408560A8B79C335763F920 /* Pods-Doutor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doutor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Doutor/Pods-Doutor.debug.xcconfig"; sourceTree = "<group>"; };
 		6B11F1BF59E1A9232F12A3E3 /* Pods_Doutor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Doutor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95833D7198CE1EC451ADF125 /* Pods-Doutor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doutor.release.xcconfig"; path = "Pods/Target Support Files/Pods-Doutor/Pods-Doutor.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,8 +124,8 @@
 		12E421F72131030A00B0DE03 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				12E422012131175000B0DE03 /* Profile */,
-				12E421FC213108EC00B0DE03 /* Appointments */,
+				12E4221D2131CF1D00B0DE03 /* Profile */,
+				12E422012131175000B0DE03 /* Appointment Info */,
 				12E421FB213108D300B0DE03 /* Form */,
 			);
 			path = Presentation;
@@ -143,14 +151,16 @@
 			path = Appointments;
 			sourceTree = "<group>";
 		};
-		12E422012131175000B0DE03 /* Profile */ = {
+		12E422012131175000B0DE03 /* Appointment Info */ = {
 			isa = PBXGroup;
 			children = (
-				12E422022131178C00B0DE03 /* AppointmentInfo.storyboard */,
-				12E42204213166DD00B0DE03 /* AppointmentInfoViewController.swift */,
-				12E422062131678600B0DE03 /* PositiveQuestionsTableViewCell.swift */,
-				12E4220C2131863F00B0DE03 /* AppointmentInfoHeaderTableViewCell.swift */,
+				12E421FC213108EC00B0DE03 /* Appointments */,
+				12E422272131CF7000B0DE03 /* AppointmentInfo.storyboard */,
+				12E422282131CF7000B0DE03 /* AppointmentInfoHeaderTableViewCell.swift */,
+				12E422262131CF6F00B0DE03 /* AppointmentInfoViewController.swift */,
+				12E422292131CF7000B0DE03 /* PositiveQuestionsTableViewCell.swift */,
 			);
+			name = "Appointment Info";
 			path = Profile;
 			sourceTree = "<group>";
 		};
@@ -162,6 +172,17 @@
 				9C9C66AE21319CA900A8CF37 /* DoctorTreatment.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		12E4221D2131CF1D00B0DE03 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				12E422212131CF4D00B0DE03 /* DoctorProfile.storyboard */,
+				12E422202131CF4D00B0DE03 /* DoctorProfileViewController.swift */,
+				12E4221F2131CF4C00B0DE03 /* QuestionaireCell.swift */,
+				12E4221E2131CF4C00B0DE03 /* QuestionaireInfoHeaderTableViewCell.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		18036061711C9E3C5344FEAC /* Frameworks */ = {
@@ -243,8 +264,9 @@
 			files = (
 				12E421FE2131090500B0DE03 /* Appointment.storyboard in Resources */,
 				12E4220B213177DF00B0DE03 /* GoogleService-Info.plist in Resources */,
+				12E422252131CF4D00B0DE03 /* DoctorProfile.storyboard in Resources */,
 				12E421E92130F18D00B0DE03 /* LaunchScreen.storyboard in Resources */,
-				12E422032131178C00B0DE03 /* AppointmentInfo.storyboard in Resources */,
+				12E4222B2131CF7000B0DE03 /* AppointmentInfo.storyboard in Resources */,
 				12E421E62130F18D00B0DE03 /* Assets.xcassets in Resources */,
 				12E421E12130F18C00B0DE03 /* Main.storyboard in Resources */,
 			);
@@ -300,19 +322,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12E4222C2131CF7000B0DE03 /* AppointmentInfoHeaderTableViewCell.swift in Sources */,
+				12E4222A2131CF7000B0DE03 /* AppointmentInfoViewController.swift in Sources */,
 				12E421FA2131086C00B0DE03 /* AppointmentViewController.swift in Sources */,
 				12E421DE2130F18C00B0DE03 /* FormViewController.swift in Sources */,
+				12E422242131CF4D00B0DE03 /* DoctorProfileViewController.swift in Sources */,
+				12E422222131CF4D00B0DE03 /* QuestionaireInfoHeaderTableViewCell.swift in Sources */,
 				12E4220021310CBF00B0DE03 /* AppointmentCollectionViewCell.swift in Sources */,
-				12E422072131678600B0DE03 /* PositiveQuestionsTableViewCell.swift in Sources */,
 				12E4221221318BE100B0DE03 /* Errors.swift in Sources */,
 				9C9C66AF21319CA900A8CF37 /* DoctorTreatment.swift in Sources */,
 				12E421F12130F2FD00B0DE03 /* QuestionTableViewCell.swift in Sources */,
 				12E421E42130F18C00B0DE03 /* Doutor.xcdatamodeld in Sources */,
 				9C9C66AD21319AF300A8CF37 /* DoctorService.swift in Sources */,
+				12E422232131CF4D00B0DE03 /* QuestionaireCell.swift in Sources */,
 				12E4220F21318ACD00B0DE03 /* UIImageView.swift in Sources */,
 				12E421DC2130F18C00B0DE03 /* AppDelegate.swift in Sources */,
-				12E42205213166DD00B0DE03 /* AppointmentInfoViewController.swift in Sources */,
-				12E4220D2131863F00B0DE03 /* AppointmentInfoHeaderTableViewCell.swift in Sources */,
+				12E4222D2131CF7000B0DE03 /* PositiveQuestionsTableViewCell.swift in Sources */,
 				12E421F42130F6C100B0DE03 /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
