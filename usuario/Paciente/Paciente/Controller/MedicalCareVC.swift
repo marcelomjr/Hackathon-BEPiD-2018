@@ -12,6 +12,7 @@ class MedicalCareVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
+        
         self.tableView.delegate = self
         self.tableView.dataSource = self
     }
