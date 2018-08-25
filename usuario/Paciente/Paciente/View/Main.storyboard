@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -131,26 +132,104 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z92-Q1-cM1">
                                 <rect key="frame" x="0.0" y="216.5" width="375" height="401.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="Vwd-WE-8so">
+                                    <rect key="frame" x="0.0" y="144" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="questionCell" id="qjH-Re-5uD" customClass="QuestionCell" customModule="Paciente" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="questionCell" rowHeight="116" id="qjH-Re-5uD" customClass="QuestionCell" customModule="Paciente" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="116"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qjH-Re-5uD" id="SHT-De-LI6">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="115.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIE-WM-vYH">
-                                                    <rect key="frame" x="15" y="2" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O paciente é diabético?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIE-WM-vYH" userLabel="question">
+                                                    <rect key="frame" x="19" y="10" width="337" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQ5-cW-6Th" userLabel="SimButton">
+                                                    <rect key="frame" x="270" y="40" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="XQ5-cW-6Th" secondAttribute="height" multiplier="1:1" id="WYW-29-KAa"/>
+                                                        <constraint firstAttribute="width" constant="60" id="i0a-Iw-lIW"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Sim"/>
+                                                    <connections>
+                                                        <action selector="yesActon:" destination="qjH-Re-5uD" eventType="touchUpInside" id="Cd8-jH-8X4"/>
+                                                    </connections>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="optionSelected" translatesAutoresizingMaskIntoConstraints="NO" id="782-Xj-swc" userLabel="imageNaoSei">
+                                                    <rect key="frame" x="173" y="40" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="782-Xj-swc" secondAttribute="height" multiplier="1:1" id="GeD-ho-VIf"/>
+                                                        <constraint firstAttribute="width" constant="30" id="T8Z-3U-WF2"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="optionNoSelected" translatesAutoresizingMaskIntoConstraints="NO" id="1EI-9K-bDd" userLabel="imageSim">
+                                                    <rect key="frame" x="285" y="40" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="bH2-VU-LjM"/>
+                                                        <constraint firstAttribute="width" secondItem="1EI-9K-bDd" secondAttribute="height" multiplier="1:1" id="qFS-2m-g3h"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="optionNoSelected" translatesAutoresizingMaskIntoConstraints="NO" id="B7G-UU-bRJ" userLabel="imageNao">
+                                                    <rect key="frame" x="60.5" y="40" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="6k2-VO-T5L"/>
+                                                        <constraint firstAttribute="width" secondItem="B7G-UU-bRJ" secondAttribute="height" multiplier="1:1" id="tx2-gL-kdX"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DeQ-pd-NfY">
+                                                    <rect key="frame" x="158" y="40" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="DeQ-pd-NfY" secondAttribute="height" multiplier="1:1" id="KMr-Ov-JcK"/>
+                                                        <constraint firstAttribute="width" constant="60" id="q0j-e8-zuE"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Não sei"/>
+                                                    <connections>
+                                                        <action selector="dontKnowAction:" destination="qjH-Re-5uD" eventType="touchUpInside" id="tUb-iF-dZO"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0r-TE-gGX" userLabel="naoButton">
+                                                    <rect key="frame" x="45" y="40" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="DKw-P6-d58"/>
+                                                        <constraint firstAttribute="width" secondItem="i0r-TE-gGX" secondAttribute="height" multiplier="1:1" id="wdf-iM-sDu"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Não"/>
+                                                    <connections>
+                                                        <action selector="noAction:" destination="qjH-Re-5uD" eventType="touchUpInside" id="Ehd-WZ-Vkb"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.44285572870000001" green="1" blue="0.2335170671" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="HIE-WM-vYH" firstAttribute="leading" secondItem="SHT-De-LI6" secondAttribute="leading" constant="19" id="0ka-Sz-nvf"/>
+                                                <constraint firstItem="782-Xj-swc" firstAttribute="bottom" secondItem="DeQ-pd-NfY" secondAttribute="bottom" constant="-30" id="5uN-vd-a5F"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="XQ5-cW-6Th" secondAttribute="trailing" constant="30" id="6ao-kW-ZGg"/>
+                                                <constraint firstAttribute="trailing" secondItem="HIE-WM-vYH" secondAttribute="trailing" constant="19" id="8IA-ai-DJ4"/>
+                                                <constraint firstItem="DeQ-pd-NfY" firstAttribute="centerX" secondItem="SHT-De-LI6" secondAttribute="centerX" id="CTk-fN-nIn"/>
+                                                <constraint firstItem="i0r-TE-gGX" firstAttribute="leading" secondItem="SHT-De-LI6" secondAttribute="leadingMargin" constant="30" id="DJU-hj-PSC"/>
+                                                <constraint firstItem="1EI-9K-bDd" firstAttribute="bottom" secondItem="XQ5-cW-6Th" secondAttribute="bottom" constant="-30" id="GTZ-0n-tsu"/>
+                                                <constraint firstItem="1EI-9K-bDd" firstAttribute="centerX" secondItem="XQ5-cW-6Th" secondAttribute="centerX" id="NXL-0B-mkn"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="i0r-TE-gGX" secondAttribute="bottom" constant="5" id="UvD-De-ghO"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="DeQ-pd-NfY" secondAttribute="bottom" constant="5" id="Xyx-42-ajf"/>
+                                                <constraint firstItem="782-Xj-swc" firstAttribute="centerX" secondItem="DeQ-pd-NfY" secondAttribute="centerX" id="a1c-nS-XQc"/>
+                                                <constraint firstItem="B7G-UU-bRJ" firstAttribute="bottom" secondItem="i0r-TE-gGX" secondAttribute="bottom" constant="-30" id="hha-KP-k3X"/>
+                                                <constraint firstItem="DeQ-pd-NfY" firstAttribute="top" secondItem="HIE-WM-vYH" secondAttribute="bottom" constant="14" id="ldU-ej-m9G"/>
+                                                <constraint firstItem="B7G-UU-bRJ" firstAttribute="centerX" secondItem="i0r-TE-gGX" secondAttribute="centerX" id="uwA-vp-0P1"/>
+                                                <constraint firstItem="HIE-WM-vYH" firstAttribute="top" secondItem="SHT-De-LI6" secondAttribute="top" constant="10" id="vFY-TV-BHh"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="XQ5-cW-6Th" secondAttribute="bottom" constant="5" id="zaM-H5-Saf"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="doctorNameLabel" destination="HIE-WM-vYH" id="272-XA-YMt"/>
+                                            <outlet property="dontKnowImage" destination="782-Xj-swc" id="o3E-wF-65I"/>
+                                            <outlet property="noImage" destination="B7G-UU-bRJ" id="79n-be-s9U"/>
+                                            <outlet property="questionLabel" destination="HIE-WM-vYH" id="FdN-LQ-3b6"/>
+                                            <outlet property="yesImage" destination="1EI-9K-bDd" id="hB2-DQ-nvQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -202,12 +281,15 @@
                             <constraint firstItem="RMQ-Ka-iE8" firstAttribute="bottom" secondItem="Z92-Q1-cM1" secondAttribute="bottom" id="2DR-QU-Keo"/>
                             <constraint firstItem="UHh-ww-nrC" firstAttribute="centerY" secondItem="Ih3-cj-3x0" secondAttribute="centerY" id="5rX-pv-W7o"/>
                             <constraint firstItem="UHh-ww-nrC" firstAttribute="leading" secondItem="Ih3-cj-3x0" secondAttribute="trailing" constant="8" id="6BD-eb-BiW"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="icv-VQ-tJ4" secondAttribute="trailing" constant="20" symbolic="YES" id="6sC-sS-gQ8"/>
                             <constraint firstItem="GTJ-nb-RBw" firstAttribute="leading" secondItem="bYf-YG-cCN" secondAttribute="leading" id="Bmc-sM-yRx"/>
                             <constraint firstItem="Z92-Q1-cM1" firstAttribute="leading" secondItem="RMQ-Ka-iE8" secondAttribute="leading" id="LC0-gq-C72"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UHh-ww-nrC" secondAttribute="trailing" constant="20" symbolic="YES" id="TdY-ET-Gcg"/>
                             <constraint firstItem="icv-VQ-tJ4" firstAttribute="centerY" secondItem="bYf-YG-cCN" secondAttribute="centerY" id="cMH-C2-Z0k"/>
                             <constraint firstItem="GtX-83-FY3" firstAttribute="centerY" secondItem="GTJ-nb-RBw" secondAttribute="centerY" id="dms-wH-Nc0"/>
                             <constraint firstItem="icv-VQ-tJ4" firstAttribute="leading" secondItem="bYf-YG-cCN" secondAttribute="trailing" constant="8" id="fOh-vm-7yP"/>
                             <constraint firstItem="Z92-Q1-cM1" firstAttribute="trailing" secondItem="RMQ-Ka-iE8" secondAttribute="trailing" id="jbt-tx-96L"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GtX-83-FY3" secondAttribute="trailing" constant="20" symbolic="YES" id="omq-R6-h26"/>
                             <constraint firstItem="GTJ-nb-RBw" firstAttribute="top" secondItem="bYf-YG-cCN" secondAttribute="bottom" constant="19" id="p1U-M4-x1f"/>
                             <constraint firstItem="Z92-Q1-cM1" firstAttribute="top" secondItem="Ih3-cj-3x0" secondAttribute="bottom" constant="25" id="rU5-Ee-wst"/>
                             <constraint firstItem="bYf-YG-cCN" firstAttribute="top" secondItem="RMQ-Ka-iE8" secondAttribute="top" constant="19" id="tds-7X-qLA"/>
@@ -217,12 +299,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RMQ-Ka-iE8"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Questionário" id="Ke3-fr-fkY"/>
+                    <navigationItem key="navigationItem" title="Questionário" id="Ke3-fr-fkY">
+                        <barButtonItem key="rightBarButtonItem" title="Enviar" id="OHB-A1-0vC" userLabel="doneButton">
+                            <color key="tintColor" red="0.95686274510000002" green="0.96862745100000003" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="doneButton:" destination="AAi-SZ-KqE" id="iaJ-Eb-zGL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Z92-Q1-cM1" id="6MY-GC-zha"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lj1-mL-53C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationItem title="Title" id="Pn5-N0-U9S"/>
             </objects>
             <point key="canvasLocation" x="1784.8" y="1009.7451274362819"/>
         </scene>
@@ -293,5 +383,7 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="optionNoSelected" width="22" height="22"/>
+        <image name="optionSelected" width="22" height="22"/>
     </resources>
 </document>
