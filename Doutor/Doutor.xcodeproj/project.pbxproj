@@ -14,6 +14,7 @@
 		12E421E62130F18D00B0DE03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12E421E52130F18D00B0DE03 /* Assets.xcassets */; };
 		12E421E92130F18D00B0DE03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12E421E72130F18D00B0DE03 /* LaunchScreen.storyboard */; };
 		12E421F12130F2FD00B0DE03 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E421F02130F2FD00B0DE03 /* QuestionTableViewCell.swift */; };
+		12E421F42130F6C100B0DE03 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E421F32130F6C100B0DE03 /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		12E421E82130F18D00B0DE03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12E421EA2130F18D00B0DE03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12E421F02130F2FD00B0DE03 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		12E421F32130F6C100B0DE03 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		12E421DA2130F18C00B0DE03 /* Doutor */ = {
 			isa = PBXGroup;
 			children = (
+				12E421F22130F6B300B0DE03 /* Extensions */,
 				12E421DB2130F18C00B0DE03 /* AppDelegate.swift */,
 				12E421DD2130F18C00B0DE03 /* FormViewController.swift */,
 				12E421DF2130F18C00B0DE03 /* Main.storyboard */,
@@ -68,6 +71,14 @@
 				12E421F02130F2FD00B0DE03 /* QuestionTableViewCell.swift */,
 			);
 			path = Doutor;
+			sourceTree = "<group>";
+		};
+		12E421F22130F6B300B0DE03 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				12E421F32130F6C100B0DE03 /* UIColor.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +156,7 @@
 				12E421F12130F2FD00B0DE03 /* QuestionTableViewCell.swift in Sources */,
 				12E421E42130F18C00B0DE03 /* Doutor.xcdatamodeld in Sources */,
 				12E421DC2130F18C00B0DE03 /* AppDelegate.swift in Sources */,
+				12E421F42130F6C100B0DE03 /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
