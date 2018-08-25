@@ -15,7 +15,7 @@ struct DoctorTreatment {
     var measurement: [String: [Int: Int]]?
     var recomendations: String?
     var treatmentID: String!
-    var treatmenteFinished: Bool!
+    var treatmentFinished: Bool!
     
     func toNSDictionary() -> [NSDictionary] {
         let array = [
@@ -26,7 +26,7 @@ struct DoctorTreatment {
             NSDictionary(dictionary: ["measurement":  measurement]),
             NSDictionary(dictionary: ["recomendations":  recomendations]),
             NSDictionary(dictionary: ["formsState":  formsState]),
-            NSDictionary(dictionary: ["treatmenteFinished":  treatmenteFinished])
+            NSDictionary(dictionary: ["treatmentFinished":  treatmentFinished])
         ]
         return array
     }
