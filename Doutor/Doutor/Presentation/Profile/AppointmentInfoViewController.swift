@@ -22,6 +22,8 @@ class AppointmentInfoViewController: UIViewController {
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+       
 
         // Do any additional setup after loading the view.
     }
