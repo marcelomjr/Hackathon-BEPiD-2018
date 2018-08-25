@@ -48,5 +48,13 @@ extension UIImageView {
             print("error load image")
         }
     }
+    
+    func circleImage(borderColor: CGColor) {
+        self.layer.borderWidth = 1
+        self.layer.masksToBounds = false
+        self.layer.borderColor = borderColor
+        self.layer.cornerRadius = self.frame.height/2
+        self.clipsToBounds = true
+    }
 }
 

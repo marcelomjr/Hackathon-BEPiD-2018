@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 enum DftAwnser: Int {
     case IDontKnow = 0
@@ -18,7 +19,19 @@ struct DftQuestion {
     var question: String
     var awnser: DftAwnser
 }
+
+
 class Service {
+    static var userID: String = "uid1010"
+    
+    static var ref: DatabaseReference!
+    
+    static func initFireBaseReference() {
+        
+        self.ref = Database.database().reference()
+        
+    }
+    
     static func getUserForms() -> [DftQuestion]{
         var array = [DftQuestion]()
         array.append(DftQuestion(question: "dor de cabeça", awnser: .IDontKnow))
@@ -28,12 +41,39 @@ class Service {
         array.append(DftQuestion(question: "cócega", awnser: .IDontKnow))
         array.append(DftQuestion(question: "sede", awnser: .IDontKnow))
         
-
+        
         
         return array
     }
     
     static func sendUserForms(userQuestions: [DftQuestion]) {
-        print(userQuestions)
+        self.initFireBaseReference()
+       
+//        let questions = self.toNSDictionary(userQuestions: userQuestions)
+        
+         for question in userQuestions {
+            
+            self.ref.child("users/" + userID + "/questions").child(question.question).setValue("\(question.awnser.rawValue)")
+        }
+        
+        
     }
+//    static func toNSDictionary(userQuestions: [DftQuestion]) -> NSDictionary {
+//
+//        var counter: Int = 0
+//
+//        var dictionary = NSDictionary()
+//
+//        for question in userQuestions {
+//            let d =
+//            [
+//                question.question: question.awnser.rawValue,
+//            ]
+//            dictionary = [counter: d]
+//            counter += 1
+//        }
+////
+//       return dictionary
+//    }
 }
+
