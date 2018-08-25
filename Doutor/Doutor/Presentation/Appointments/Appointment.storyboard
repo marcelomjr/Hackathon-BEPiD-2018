@@ -57,6 +57,7 @@
                                         <connections>
                                             <outlet property="backgroundImage" destination="JUl-gs-gwV" id="hMy-NT-Kdo"/>
                                             <outlet property="timeLabel" destination="Cc9-ET-MZG" id="VSK-jV-XxT"/>
+                                            <segue destination="qmX-sE-6Ya" kind="show" id="bwt-MV-Lxv"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -79,6 +80,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aZt-6t-ZKu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1212" y="143.47826086956522"/>
+        </scene>
+        <!--AppointmentInfo-->
+        <scene sceneID="E6m-FN-xhn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AppointmentInfo" id="qmX-sE-6Ya" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VpW-az-GE8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1955" y="143"/>
         </scene>
     </scenes>
     <resources>

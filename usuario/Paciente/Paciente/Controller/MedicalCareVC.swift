@@ -8,6 +8,7 @@
 
 
 import UIKit
+import Firebase
 
 class MedicalCareVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
@@ -22,6 +23,11 @@ class MedicalCareVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         self.tableView.dataSource = self
         
         self.userQuestions = Service.getUserForms()
+        
+        
+        var ref: DatabaseReference!
+        
+        ref = Database.database().reference()
         
     }
     
