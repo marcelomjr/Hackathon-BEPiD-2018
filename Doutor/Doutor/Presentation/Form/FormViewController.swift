@@ -29,7 +29,6 @@ class FormViewController: UIViewController, UITextViewDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-        
     }
     
     func setNavBarLayout() {
@@ -84,7 +83,5 @@ extension FormViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-    
-    
 }
 
