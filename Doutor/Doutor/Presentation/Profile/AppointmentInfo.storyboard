@@ -27,7 +27,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="116"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3AE-FA-gyR">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="3AE-FA-gyR">
                                             <rect key="frame" x="16" y="16" width="80" height="80"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="3AE-FA-gyR" secondAttribute="height" multiplier="1:1" id="4IN-bG-xpZ"/>
@@ -143,4 +143,7 @@
             <point key="canvasLocation" x="1010.4" y="163.26836581709148"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Rectangle" width="159" height="73"/>
+    </resources>
 </document>
