@@ -22,11 +22,14 @@ class AppointmentInfoViewController: UIViewController {
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        self.setPatientLayout()
 
         // Do any additional setup after loading the view.
     }
     
     func setPatientLayout() {
+        self.profileImage.circleImage(borderColor: UIColor(hexString: "#4E89AD").cgColor)
         
     }
 
