@@ -38,7 +38,7 @@ class AppointmentInfoViewController: UIViewController {
 extension AppointmentInfoViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 1
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -47,7 +47,7 @@ extension AppointmentInfoViewController: UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PositiveQuestionsCell", for: indexPath) as! PositiveQuestionsTableViewCell
-        cell.questionLabel.text = "something"
+        cell.questionLabel.text = "É fumante?"
         return cell
     }
     
