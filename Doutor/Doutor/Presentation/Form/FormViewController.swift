@@ -24,22 +24,28 @@ class FormViewController: UIViewController, UITextViewDelegate {
         self.tableView.dataSource = self
         
         self.setTextViewLayout()
-        self.setNavBarLayout()
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.setNavBarLayout()
     }
     
     func setNavBarLayout() {
+        // change nav bar color
         navigationController?.navigationBar.barTintColor = UIColor(hexString: "#4E89AD")
+        // change title
         navigationController?.navigationBar.topItem?.title = "Questionário"
+        // change title color
         let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
     }
     
     func setTextViewLayout() {
+        // add border to text view
         self.newQuestionTextView.layer.borderColor = UIColor(hexString: "CCCCCC").cgColor
         self.newQuestionTextView.layer.borderWidth = 1
         self.newQuestionTextView.layer.cornerRadius = 15
@@ -84,7 +90,5 @@ extension FormViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-    
-    
 }
 
