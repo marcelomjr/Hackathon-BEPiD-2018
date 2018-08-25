@@ -14,9 +14,18 @@ class AppointmentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.setNavBarLayout()
+    }
+    
+    func setNavBarLayout() {
+        // change nav bar title
+        navigationController?.navigationBar.topItem?.title = "Consultas"
     }
 
 }
