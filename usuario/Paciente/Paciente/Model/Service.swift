@@ -34,12 +34,12 @@ class Service {
     
     static func getUserForms() -> [DftQuestion]{
         var array = [DftQuestion]()
-        array.append(DftQuestion(question: "dor de cabeça", awnser: .IDontKnow))
-        array.append(DftQuestion(question: "cancer", awnser: .No))
-        array.append(DftQuestion(question: "alergia", awnser: .IDontKnow))
-        array.append(DftQuestion(question: "coceira", awnser: .IDontKnow))
-        array.append(DftQuestion(question: "cócega", awnser: .IDontKnow))
-        array.append(DftQuestion(question: "sede", awnser: .IDontKnow))
+        array.append(DftQuestion(question: "Os pais já tiveram câncer?", awnser: .IDontKnow))
+        array.append(DftQuestion(question: "Os pais têm problema cardíaco?", awnser: .No))
+        array.append(DftQuestion(question: "Possui alergias?", awnser: .IDontKnow))
+        array.append(DftQuestion(question: "Fuma?", awnser: .IDontKnow))
+        array.append(DftQuestion(question: "Faz uso de medicamentos?", awnser: .IDontKnow))
+        array.append(DftQuestion(question: "Possui alguma doença?", awnser: .IDontKnow))
         
         
         

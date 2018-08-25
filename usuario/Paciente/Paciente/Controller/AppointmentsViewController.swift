@@ -13,6 +13,8 @@ class AppointmentsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
+    var selected = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,17 +24,26 @@ class AppointmentsViewController: UIViewController {
     }
 
     @IBAction func indexChanged(_ sender: Any) {
-//        switch segmentedControl.selectedSegmentIndex {
-//        case 0:
-//
-//        }
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            selected = false
+            tableView.reloadData()
+        case 1:
+            selected = true
+            tableView.reloadData()
+        default:
+            break
+        }
     }
     
 }
 
 extension AppointmentsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        if selected == false {
+            return 1
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
