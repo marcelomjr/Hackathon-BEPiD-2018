@@ -12,6 +12,8 @@ class MedicalCareVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
+        let image = UIImage(named: "navBAr")
+        self.navigationController?.navigationBar.setBackgroundImage(image, for: .default)
         self.tableView.delegate = self
         self.tableView.dataSource = self
     }
