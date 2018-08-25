@@ -82,10 +82,10 @@
             </objects>
             <point key="canvasLocation" x="197.59999999999999" y="163.26836581709148"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="jKX-0S-wNE">
             <objects>
-                <viewController id="rgK-SF-VUu" sceneMemberID="viewController">
+                <viewController id="rgK-SF-VUu" customClass="ProfileViewController" customModule="Doutor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KPN-Em-bDu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -160,7 +160,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Wwb-6d-LLa">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Wwb-6d-LLa" customClass="PositiveQuestionsTableViewCell" customModule="Doutor" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="190" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wwb-6d-LLa" id="LcI-ie-axf">
@@ -181,6 +181,9 @@
                                         <constraints>
                                             <constraint firstItem="bbC-n4-TCS" firstAttribute="centerY" secondItem="Wwb-6d-LLa" secondAttribute="centerY" id="gcw-cX-BHn"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="questionLabel" destination="bbC-n4-TCS" id="uQ8-Mh-g65"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -194,6 +197,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qfc-5i-wQv"/>
                     </view>
+                    <connections>
+                        <outlet property="ageLabel" destination="BJn-NI-ohL" id="IZs-IA-x7r"/>
+                        <outlet property="heightLabel" destination="ijy-Pd-irt" id="Dso-Wr-dHp"/>
+                        <outlet property="nameLabel" destination="A8G-tC-ZSY" id="H3L-Ni-474"/>
+                        <outlet property="profileImage" destination="3AE-FA-gyR" id="gff-fL-2WP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDr-YB-pjP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
